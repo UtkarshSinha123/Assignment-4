@@ -1,9 +1,10 @@
 # Try to open and read the file
 try:
     with open("sample.txt", "r") as file:
-        print("Contents of sample.txt:\n")
+        line_number = 1
         for line in file:
-            print(line.strip())  # strip() removes extra newline characters
+            print(f"Line {line_number} : {line.strip()}")
+            line_number += 1
 except FileNotFoundError:
     print("Error: The file 'sample.txt' was not found.")
 except Exception as e:
